@@ -1,0 +1,39 @@
+.primary {
+  color: #f5a219 !important;
+}
+
+.primary-bg {
+  background-color: #f5a219 !important;
+}
+
+.secondary, .text-light, a:hover, a:active {
+  color: #f6f1ce !important;
+}
+
+.secondary-bg {
+  background-color: #f6f1ce !important;
+}
+
+.dark-bg {
+  background-color: #2a2d2b !important;
+}
+
+.btn-primary {
+  background-color: #f5a219 !important;
+  color: #f6f1ce !important;
+  border: 0px
+}
+
+.divider {
+  border-bottom: solid 5px #f5a219;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.hero-heading {
+  font-size: 85px;
+}
+
+.hero-subhead {
+  font-size: 40px;
+}
