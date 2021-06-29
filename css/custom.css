@@ -1,0 +1,56 @@
+.custom-nav > li {
+    margin-right: 20px;
+}
+
+.custom-header {
+    height: 55vh;
+}
+
+h1.display-5.fw-bolder.text-white.mb-2::after {
+    content: "";
+    background: #f5a219;
+    width: 75px;
+    max-width: 75%;
+    height: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 0.35em;
+}
+
+.content-img {
+    height: 250px;
+}
+
+.border-primary {
+    border-color: #f5a219 !important;
+}
+
+.text-primary {
+    color:  #f5a219 !important;
+}
+
+.bg-dark {
+    background-color: #2a2d2b !important;
+}
+
+.bg-primary {
+    background-color: #f5a219 !important;
+}
+
+.bg-offwhite {
+    background-color: #f6f1ce;
+}
+
+.btn-primary, .btn-primary:visited {
+    background-color: #f5a219 !important;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #c48214 !important;
+}
+
+.btn-primary:focus, .btn-primary:visited {
+    border-color: #c48214 !important;
+    box-shadow: 0 0 0 0.25rem rgb(245 162 25 / 50%);
+}
