@@ -6,7 +6,7 @@
     height: 55vh;
 }
 
-h1.display-5.fw-bolder.text-white.mb-2::after {
+h1.display-5.fw-bolder.text-white.mb-2::after, h2.fw-bolder.text-light::after {
     content: "";
     background: #f5a219;
     width: 75px;
