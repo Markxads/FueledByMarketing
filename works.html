@@ -21,9 +21,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Gallery JS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <!-- Custom Styles -->
         <link href="css/custom.css" rel="stylesheet" />
         <!-- Internal Styles -->
@@ -51,6 +50,29 @@
                 url(assets/works-banner.jpg);
                 background-position: center;
             }
+            .modal button.close {
+               right: 0;
+               outline: 0;
+            }
+            
+            #gallery-lightbox img {
+               height: 350px;
+               object-fit: cover;
+               cursor: pointer;
+            }
+
+            #gallery-lightbox img:hover {
+               opacity: 0.9;
+               transition: 0.5s ease-out;
+            }
+
+            .carousel-control-next-icon {
+               background-image: url(assets/right-arrow.svg) !important;
+            }
+
+            .carousel-control-prev-icon {
+               background-image: url(assets/left-arrow.svg) !important;
+            }           
         </style>
     </head>
     <body>
@@ -104,75 +126,67 @@
         <!-- Gallery section-->
         <section class="bg-dark">
             <div class="container-fluid p-0">
-               <div class="row">
+               <div class="row" data-toggle="modal" data-target="#galleryModal" id="gallery-lightbox">
                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter logos p-0">
-                       <img src="assets/gallery/logos/logo1.jpg" class="img-fluid" />
+                       <img src="assets/gallery/logos/logo1.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="0"/>
                     </div>
                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter logos p-0">
-                       <img src="assets/gallery/logos/logo5.jpg" class="img-fluid" />
+                       <img src="assets/gallery/logos/logo5.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="1" />
                     </div>
                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter logos p-0">
-                       <img src="assets/gallery/logos/logo3.jpg" class="img-fluid" />
+                       <img src="assets/gallery/logos/logo3.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="2" />
                     </div>
                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter logos p-0">
-                        <img src="assets/gallery/logos/logo2.jpg" class="img-fluid" />
-                     </div>
-                  </div>
-               <div class="row">
-                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter branding p-0">
-                        <img src="assets/gallery/branding/branding1.jpg" class="img-fluid" />
+                        <img src="assets/gallery/logos/logo2.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="3" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter branding p-0">
-                        <img src="assets/gallery/branding/branding2.jpg" class="img-fluid" />
+                        <img src="assets/gallery/branding/branding1.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="4" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter branding p-0">
-                        <img src="assets/gallery/branding/branding6.jpg" class="img-fluid" />
+                        <img src="assets/gallery/branding/branding2.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="5" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter branding p-0">
-                         <img src="assets/gallery/branding/branding7.png" class="img-fluid" />
+                        <img src="assets/gallery/branding/branding6.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="6" />
+                     </div>
+                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter branding p-0">
+                         <img src="assets/gallery/branding/branding7.png" class="img-fluid" data-target="#galleryModal" data-slide-to="7" />
                       </div>
-               </div>
-               <div class="row">
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter illustration p-0">
-                        <img src="assets/gallery/illustration/illus1.jpg" class="img-fluid" />
+                        <img src="assets/gallery/illustration/illus1.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="8" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter illustration p-0">
-                        <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid" />
+                        <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="9" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter illustration p-0">
-                        <img src="assets/gallery/illustration/illus3.jpg" class="img-fluid" />
+                        <img src="assets/gallery/illustration/illus3.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="10" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter illustration p-0">
-                        <img src="assets/gallery/illustration/illus4.jpg" class="img-fluid" />
-                     </div>
-               </div>
-               <div class="row">
-                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter social p-0">
-                        <img src="assets/gallery/social/soc1.jpg" class="img-fluid" />
+                        <img src="assets/gallery/illustration/illus4.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="11" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter social p-0">
-                        <img src="assets/gallery/social/soc5.jpg" class="img-fluid" />
+                        <img src="assets/gallery/social/soc1.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="12" />
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter social p-0">
-                        <img src="assets/gallery/social/soc6.jpg" class="img-fluid" />
+                        <img src="assets/gallery/social/soc5.jpg" class="img-fluid"  data-target="#galleryModal" data-slide-to="13"/>
                      </div>
                      <div class="gallery_product col-lg-3 col-md-6 col-12 filter social p-0">
-                        <img src="assets/gallery/social/soc7.jpg" class="img-fluid" />
+                        <img src="assets/gallery/social/soc6.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="14"/>
                      </div>
-               </div>
-               <div class="row">
-                  <div class="gallery_product col-lg-3 col-md-6 col-12 filter merch p-0">
-                     <img src="assets/gallery/merch/merch1.jpg" class="img-fluid" />
-                  </div>
-                  <div class="gallery_product col-lg-3 col-md-6 col-12 filter merch p-0">
-                     <img src="assets/gallery/merch/merch2.jpg" class="img-fluid" />
-                  </div>
-                  <div class="gallery_product col-lg-3 col-md-6 col-12 filter posters p-0">
-                     <img src="assets/gallery/posters/post1.jpg" class="img-fluid" />
-                  </div>
-                  <div class="gallery_product col-lg-3 col-md-6 col-12 filter posters p-0">
-                     <img src="assets/gallery/posters/post2.jpg" class="img-fluid" />
-                  </div>
+                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter social p-0">
+                        <img src="assets/gallery/social/soc7.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="15"/>
+                     </div>
+                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter merch p-0">
+                        <img src="assets/gallery/merch/merch1.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="16"/>
+                     </div>
+                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter merch p-0">
+                        <img src="assets/gallery/merch/merch2.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="17"/>
+                     </div>
+                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter posters p-0">
+                        <img src="assets/gallery/posters/post1.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="18"/>
+                     </div>
+                     <div class="gallery_product col-lg-3 col-md-6 col-12 filter posters p-0">
+                        <img src="assets/gallery/posters/post2.jpg" class="img-fluid" data-target="#galleryModal" data-slide-to="19"/>
+                     </div>
                </div>
             </div>
         </section>
@@ -196,11 +210,120 @@
         <footer class="py-4 bg-dark">
             <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Markxads 2021</p></div>
         </footer>
-        <!-- Gallery JS-->
-        <script src="js/gallery.js"></script>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <div class="modal" id="galleryModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <button type="button" class="close m-0 p-3 position-absolute right-0 display-2 bg-primary text-white" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog modal-lg" role="document">
+               <div class="modal-content bg-transparent">
+                  <div class="modal-body p-0">
+                        <div id="carouselExample" class="carousel slide carousel-fade" data-ride="">
+                           <div class="carousel-item active">
+                              <img class="d-block w-100" src="assets/gallery/logos/logo1.jpg" alt="First slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/logos/logo5.jpg" alt="Second slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/logos/logo3.jpg" alt="Third slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/logos/logo2.jpg" alt="Fourth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/branding/branding1.jpg" alt="Fifth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/branding/branding2.jpg" alt="Sixth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/branding/branding6.jpg" alt="Seventh slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/branding/branding7.png" alt="Eight slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/illustration/illus1.jpg" alt="Ninth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/illustration/illus2.jpg" alt="Tenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/illustration/illus3.jpg" alt="Eleventh slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/illustration/illus4.jpg" alt="Twelfth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/social/soc1.jpg" alt="Thirteenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/social/soc5.jpg" alt="Fourteenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/social/soc6.jpg" alt="Fifteenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/social/soc7.jpg" alt="Sixteenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/merch/merch1.jpg" alt="Seventeenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/merch/merch2.jpg" alt="Eighteenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/posters/post1.jpg" alt="Nineteenth slide">
+                           </div>
+                           <div class="carousel-item">
+                              <img class="d-block w-100" src="assets/gallery/posters/post2.jpg">
+                           </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                  </div>
+               </div>
+             </div>
+         </div>
+        <script>
+         $(document).ready(function(){
+ 
+         $(".filter-button").click(function(){
+             var value = $(this).attr('data-filter');
+             
+             if(value == "all")
+             {
+                 //$('.filter').removeClass('hidden');
+                 $('.filter').show('1000');
+             }
+             else
+             {
+         //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+         //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                 $(".filter").not('.'+value).hide('3000');
+                 $('.filter').filter('.'+value).show('3000');
+                 
+             }
+         });
+ 
+         if ($(".filter-button").removeClass("active")) {
+         $(this).removeClass("active");
+         }
+         $(this).addClass("active");
+ 
+         });
+     </script>
+     <script>
+         $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+             event.preventDefault();
+             $(this).ekkoLightbox();
+         });
+     </script>
+     <!-- Bootstrap core JS-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
