@@ -27,7 +27,6 @@
         <link href="css/custom.css" rel="stylesheet" />
         <!-- Internal Styles -->
         <style>
-
             .innerpage-header {
                background: 
                 /* top, transparent red, faked with gradient */ 
@@ -38,12 +37,24 @@
                 /* bottom, image */
                 url(assets/pricing-banner.jpg);
                 background-position: center 65%;
-            }      
+            }   
+            
+            ul.custom-list {
+                list-style: none;
+            }
 
-            @media only screen and (max-width: 480px) {
-               .sm-mb {
-                  margin-bottom: 20px;
-               }
+            .custom-card-header {
+                background-color: rgba(0, 0, 0, 0) !important;
+                border: none !important;
+            }
+
+            .accordion-btn {
+                background-color: rgb(0 ,0 ,0 ,0);
+                border: none;
+            }
+
+            .custom-icon {
+                margin-left: 10px;
             }
         </style>
     </head>
@@ -58,82 +69,77 @@
                     <div class="col-lg-6 col-12 col-md-8">
                         <div class="text-center my-5">
                             <h1 class="display-2 fw-bolder text-white mb-4">Pricing</h1>
+                            <p class="text-white mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Contact section -->
-        <section class="p-5 bg-dark">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-12 col-md-6 sm-mb">
-                        <div class="card bg-offwhite">
-                            <div class="card-body p-3 text-center justify-content-center">
-                                <a href="mailto:info@markxads.com" class="link-dark"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope-fill"></i></div></a>
-                                <h2 class="h4 fw-bolder">Email</h2>
-                                <a href="mailto:info@markxads.com" class="link-dark">info@markxads.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12 col-md-6">
-                        <div class="card bg-offwhite">
-                            <div class="card-body p-3 text-center justify-content-center">
-                                <a href="mailto:info@markxads.com" class="link-dark"><div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone-fill"></i></div></a>
-                                <h2 class="h4 fw-bolder">Phone</h2>
-                                <a href="tel:+14075366286" class="link-dark">+1 407 536 6286</a>
-                            </div>
-                        </div>
+        <!-- Filters section -->
+        <section class="bg-dark py-4">
+            <div class="container px-5 d-flex justify-content-center flex-column">
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto text-center">
+                        <button class="btn btn-primary filter-button" data-filter="logos">Logos</button>
+                        <button class="btn btn-primary filter-button" data-filter="branding">Branding</button>
+                        <button class="btn btn-primary filter-button" data-filter="illustration">Illustration</button>
+                        <button class="btn btn-primary filter-button" data-filter="social">Social Media</button>
+                        <button class="btn btn-primary filter-button" data-filter="merch">Merch</button>
+                        <button class="btn btn-primary filter-button" data-filter="posters">Posters</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Form Section -->
-        <section class="py-4">
-            <div class="container px-3 py-5 ">
-                <div class="row">
-                    <div class="col-lg-8 col-12 col-md-12 mx-auto">
-                        <form id="contactForm" action="" method="POST">
-                            <div class="row">
-                                <div class="col-lg-12 col-12 text-center">
-                                    <h2 class="h4 display-5 fw-bolder">Featured Title</h2>
-                                    <p class="mb-4 fw-bolder">Do you need design support or questions about our capabilities and pricing? Please do not hesitate to contact&nbsp;us!</p>
+                <div class="row d-flex justify-content-center">
+                    <!-- Scale Tier -->
+                    <div class="col-lg-4 col-12 logos">
+                        <div class="card mb-5 mb-lg-0 p-4 bg-offwhite">
+                        <div class="card-body">
+                            <h3 class="card-title text-muted text-uppercase text-center">Pro</h3>
+                            <h6 class="card-price text-center">$999<span class="period">/month</span></h6>
+                            <hr>
+                            <p class="card-text">Ideal for businesses in need of simple graphic design work. 
+                            1-2 Day Turnaround</p>
+                            <div class="accordion mb-3" id="proCard">
+                                <div class="card-header custom-card-header px-0" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <button class="link-dark accordion-btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                      Learn More <i class="bi bi-arrow-right custom-icon"></i>
+                                    </button>
+                                  </h5>
+                                </div>
+                            
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#proCard">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </div>
                             </div>
-                            <div class="row align-items-stretch mb-1">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="form-group">
-                                        <input class="form-control form-control-lg" id="FirstName" name="FirstName" type="text" placeholder="First Name *" required="required" data-validation-required-message="Please enter your first name.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control form-control-lg" id="email" name="_replyto" type="email" placeholder="Email Address *" required="required" data-validation-required-message="Please enter your email address.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
+                            <a href="#" class="btn btn-block btn-primary text-uppercase w-100">Button</a>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Pro Tier -->
+                    <div class="col-lg-4 col-12 logos">
+                        <div class="card mb-5 mb-lg-0 p-4 bg-offwhite">
+                        <div class="card-body">
+                            <h3 class="card-title text-muted text-uppercase text-center">Scale</h3>
+                            <h6 class="card-price text-center">$999<span class="period">/month</span></h6>
+                            <hr>
+                            <p class="card-text">Ideal for businesses in need of simple graphic design work. 
+                            1-2 Day Turnaround</p>
+                            <div class="accordion mb-3" id="proCard">
+                                <div class="card-header custom-card-header px-0" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <button class="link-dark accordion-btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                      Learn More <i class="bi bi-arrow-right custom-icon"></i>
+                                    </button>
+                                  </h5>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="form-group">
-                                        <input class="form-control form-control-lg" id="LastName" name="LastName" type="text" placeholder="Last Name *" required="required" data-validation-required-message="Please enter your last name.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control form-control-lg" id="phone" name="phone" type="tel" placeholder="Phone Number *" required="required" data-validation-required-message="Please enter your phone number.">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-lg-12 col-md-12 col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control form-control-lg" id="message" rows="3" placeholder="Message:"></textarea>
-                                    </div>
+                            
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#proCard">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                 </div>
                             </div>
-                            <div class="text-center">
-                                <div id="success"></div>
-                                <button class="btn btn-primary btn-lg text-uppercase" id="sendMessageButton" type="submit">Submit</button>
-                            </div>
-                        </form>
+                            <a href="#" class="btn btn-block btn-primary text-uppercase w-100">Button</a>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
