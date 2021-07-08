@@ -17,12 +17,14 @@
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/logo.svg" />
         <!-- Bootstrap icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />    
         <!-- Core theme CSS (includes Bootstrap) -->
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Gallery JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
         <!-- Custom Styles -->
         <link href="css/custom.css" rel="stylesheet" />
         <!-- Internal Styles -->
@@ -38,6 +40,18 @@
                 url(assets/pricing-banner.jpg);
                 background-position: center 65%;
             }   
+
+            .bottom-hero {
+                background: 
+                /* top, transparent red, faked with gradient */ 
+                linear-gradient(
+                rgba(0, 0, 0, 0.55), 
+                rgba(0, 0, 0, 0.55)
+                ),
+                /* bottom, image */
+                url(assets/bottom-banner.jpg);
+                background-position: center;
+            }
             
             ul.custom-list {
                 list-style: none;
@@ -55,6 +69,27 @@
 
             .custom-icon {
                 margin-left: 10px;
+            }
+
+            .custom-img {
+                border-radius: 10px;
+                height: 400px;
+                object-fit: cover;
+            }
+
+            .custom-accordion {
+                width: 50%;
+            }
+
+            .accordion-button:not(.collapsed) {
+                color: #ffffff;
+                background-color: #f5a219;
+                box-shadow: 0 0 0 0.25rem rgb(245 162 25 / 50%);
+            }
+
+            .accordion-button:focus {
+                border-color: #f5a219 !important;
+                box-shadow: 0 0 0 0.25rem rgb(245 162 25 / 50%) !important;
             }
         </style>
     </head>
@@ -75,10 +110,10 @@
                 </div>
             </div>
         </header>
-        <!-- Filters section -->
+        <!-- Pricing section -->
         <section class="bg-dark py-4">
             <div class="container px-5 d-flex justify-content-center flex-column">
-                <div class="row mb-4">
+                <div class="row my-4">
                     <div class="col-12 mx-auto text-center">
                         <button class="btn btn-primary filter-button" data-filter="logos">Logos</button>
                         <button class="btn btn-primary filter-button" data-filter="branding">Branding</button>
@@ -88,57 +123,290 @@
                         <button class="btn btn-primary filter-button" data-filter="posters">Posters</button>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <!-- Scale Tier -->
-                    <div class="col-lg-4 col-12 logos">
-                        <div class="card mb-5 mb-lg-0 p-4 bg-offwhite">
-                        <div class="card-body">
-                            <h3 class="card-title text-muted text-uppercase text-center">Pro</h3>
-                            <h6 class="card-price text-center">$999<span class="period">/month</span></h6>
-                            <hr>
-                            <p class="card-text">Ideal for businesses in need of simple graphic design work. 
-                            1-2 Day Turnaround</p>
-                            <div class="accordion mb-3" id="proCard">
-                                <div class="card-header custom-card-header px-0" id="headingOne">
-                                  <h5 class="mb-0">
-                                    <button class="link-dark accordion-btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                      Learn More <i class="bi bi-arrow-right custom-icon"></i>
-                                    </button>
-                                  </h5>
+                <div class="row gx-5 justify-content-center mb-4">
+                    <!-- Pricing card free-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0 bg-offwhite">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">Free</div>
+                                <div class="mb-3">
+                                    <span class="display-4 fw-bold">$0</span>
+                                    <span class="text-muted">/ mo.</span>
                                 </div>
-                            
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#proCard">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>1 users</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        5GB storage
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited public projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Community access
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Unlimited private projects
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Dedicated support
+                                    </li>
+                                    <li class="mb-2 text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Free linked domain
+                                    </li>
+                                    <li class="text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Monthly status reports
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
                             </div>
-                            <a href="#" class="btn btn-block btn-primary text-uppercase w-100">Button</a>
-                        </div>
                         </div>
                     </div>
-                    <!-- Pro Tier -->
-                    <div class="col-lg-4 col-12 logos">
-                        <div class="card mb-5 mb-lg-0 p-4 bg-offwhite">
-                        <div class="card-body">
-                            <h3 class="card-title text-muted text-uppercase text-center">Scale</h3>
-                            <h6 class="card-price text-center">$999<span class="period">/month</span></h6>
-                            <hr>
-                            <p class="card-text">Ideal for businesses in need of simple graphic design work. 
-                            1-2 Day Turnaround</p>
-                            <div class="accordion mb-3" id="proCard">
-                                <div class="card-header custom-card-header px-0" id="headingOne">
-                                  <h5 class="mb-0">
-                                    <button class="link-dark accordion-btn d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                      Learn More <i class="bi bi-arrow-right custom-icon"></i>
-                                    </button>
-                                  </h5>
+                    <!-- Pricing card pro-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0 bg-offwhite">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    Pro
                                 </div>
-                            
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#proCard">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="mb-3">
+                                    <span class="display-4 fw-bold">$9</span>
+                                    <span class="text-muted">/ mo.</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>5 users</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        5GB storage
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited public projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Community access
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited private projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Dedicated support
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Free linked domain
+                                    </li>
+                                    <li class="text-muted">
+                                        <i class="bi bi-x"></i>
+                                        Monthly status reports
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing card enterprise-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card bg-offwhite">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
+                                <div class="mb-3">
+                                    <span class="display-4 fw-bold">$49</span>
+                                    <span class="text-muted">/ mo.</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>Unlimited users</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        5GB storage
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited public projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Community access
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unlimited private projects
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Dedicated support
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        <strong>Unlimited</strong>
+                                        linked domains
+                                    </li>
+                                    <li class="text-muted">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Monthly status reports
+                                    </li>
+                                </ul>
+                                <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Items -->
+        <section class="py-4">
+            <div class="container">
+                <div class="row my-4">
+                    <div class="col-lg-12 col-12 text-center">
+                        <h3 class="h4 display-5 fw-bolder">Featured Title</h3>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="owl-carousel owl-theme mb-2">
+                        <div class="item text-center me-4">
+                            <h4 class="fw-bold">Branding</h4>
+                            <img src="assets/gallery/branding/branding1.jpg" class="img-fluid custom-img">
+                        </div>
+                        <div class="item text-center me-4">
+                            <h4 class="fw-bold">Illustration</h4>
+                            <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid custom-img">
+                        </div>
+                        <div class="item text-center me-4">
+                            <h4 class="fw-bold">Social Media</h4>
+                            <img src="assets/gallery/social/soc1.jpg" class="img-fluid custom-img">
+                        </div>
+                        <div class="item text-center me-4">
+                            <h4 class="fw-bold">Merch</h4>
+                            <img src="assets/gallery/merch/merch2.jpg" class="img-fluid custom-img">
+                        </div>
+                        <div class="item text-center me-4">
+                            <h4 class="fw-bold">Posters</h4>
+                            <img src="assets/gallery/posters/post1.jpg" class="img-fluid custom-img">
+                        </div>
+                    </div>
+                    <a href="works.html" class="link link-primary fw-bold text-decoration-none text-center fs-4">See More Work Samples <i class="bi bi-arrow-right ms-2 fw-bold"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- 2 column -->
+        <section class="bg-dark">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6 col-12">
+                        <h3 class="fs-1 fw-bolder text-primary mb-4">Want to work with us?</h3>
+                        <p class="text-white mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
+                        <a class="btn btn-primary btn-lg px-4" href="#">Contact Us</a>
+                    </div>
+                    <div class="col-lg-6 col-12 justify-content-end d-flex">
+                        <img src="assets/example-scene-2.svg" class="img-fluid custom-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 2 column -->
+        <section class="py-4">
+            <div class="py-4 container">
+                <div class="row py-2 mb-4">
+                    <div class="col-lg-6 col-12 text-center border-end border-2 p-4">
+                        <h3 class="fs-1 fw-bolder mb-4">Placeholder Title</h3>
+                        <p class="mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
+                        <a href="works.html" class="link link-primary fw-bold text-decoration-none text-center fs-5">See More Work Samples <i class="bi bi-arrow-right ms-2 fw-bold"></i></a>
+                    </div>
+                    <div class="col-lg-6 col-12 text-center p-4">
+                        <h3 class="fs-1 fw-bolder mb-4">Placeholder Title</h3>
+                        <p class="mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
+                        <a href="works.html" class="link link-primary fw-bold text-decoration-none text-center fs-5">See More Work Samples <i class="bi bi-arrow-right ms-2 fw-bold"></i></a>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-2">
+                    <div class="col-lg-8 col-12">
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">Thank you for putting together such a great product. We loved working with you and the whole team, and we will be recommending you to others!</p>
+                                        <div class="small text-muted">- Client Name, Location</div>
+                                    </div>
                                 </div>
                             </div>
-                            <a href="#" class="btn btn-block btn-primary text-uppercase w-100">Button</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="py-4 bg-dark">
+            <div class="py-4 container">
+                <div class="row text-center">
+                    <h3 class="fs-1 fw-bolder mb-4 text-primary">FAQS</h3>
+                </div>
+                <div class="row">
+                    <div class="accordion accordion-flush custom-accordion mx-auto" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item #1
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item #2
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bottom Hero -->
+        <section class="bottom-hero py-5 d-flex align-items-center">
+            <div class="container px-3">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-12 col-md-8">
+                        <div class="text-center my-5">
+                            <h2 class="display-3 fw-bolder text-white mb-4">Want to work with us?</h2>
+                            <p class="text-white mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                                <a class="btn btn-primary btn-lg px-4" href="#">Contact Us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,5 +480,12 @@
             <script>
                 includeHTML();
     </script>
+    <script>
+        $(document).ready(function(){
+        $('.owl-carousel').owlCarousel();
+        });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>    
     </body>
 </html>
