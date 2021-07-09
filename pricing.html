@@ -91,6 +91,49 @@
                 border-color: #f5a219 !important;
                 box-shadow: 0 0 0 0.25rem rgb(245 162 25 / 50%) !important;
             }
+
+            .accordion-button:not(.collapsed)::after {
+                fill: #ffffff !important;
+            }
+
+            .mobile-featured {
+                display: none;
+            }
+
+            @media only screen and (max-width: 768px) {
+                .h-md-200 {
+                    height: 200px;
+                }
+
+                .obj-fit-sm-contain {
+                    object-fit: contain;
+                }
+            }
+
+            @media only screen and (max-width: 480px) {
+                .custom-accordion {
+                    width: 100%;
+                }
+
+                .custom-img {
+                    height: 150px;
+                    object-fit: contain;
+                }
+
+                .owl-nav {
+                    display: none;
+                }
+                
+                .desktop-featured {
+                    display: none;
+                }
+
+                .mobile-featured {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
         </style>
     </head>
     <body>
@@ -113,7 +156,7 @@
         <!-- Pricing section -->
         <section class="bg-dark py-4">
             <div class="container px-5 d-flex justify-content-center flex-column">
-                <div class="row my-4">
+                <!--<div class="row my-4">
                     <div class="col-12 mx-auto text-center">
                         <button class="btn btn-primary filter-button" data-filter="logos">Logos</button>
                         <button class="btn btn-primary filter-button" data-filter="branding">Branding</button>
@@ -122,10 +165,10 @@
                         <button class="btn btn-primary filter-button" data-filter="merch">Merch</button>
                         <button class="btn btn-primary filter-button" data-filter="posters">Posters</button>
                     </div>
-                </div>
-                <div class="row gx-5 justify-content-center mb-4">
+                </div>-->
+                <div class="row gx-5 justify-content-center my-4">
                     <!-- Pricing card free-->
-                    <div class="col-lg-6 col-xl-4">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <div class="card mb-5 mb-xl-0 bg-offwhite">
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -172,7 +215,7 @@
                         </div>
                     </div>
                     <!-- Pricing card pro-->
-                    <div class="col-lg-6 col-xl-4">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <div class="card mb-5 mb-xl-0 bg-offwhite">
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold">
@@ -222,7 +265,7 @@
                         </div>
                     </div>
                     <!-- Pricing card enterprise-->
-                    <div class="col-lg-6 col-xl-4">
+                    <div class="col-lg-4 col-md-6 col-12">
                         <div class="card bg-offwhite">
                             <div class="card-body p-5">
                                 <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
@@ -280,44 +323,66 @@
                         <h3 class="h4 display-5 fw-bolder">Featured Title</h3>
                     </div>
                 </div>
-                <div class="row mb-4">
+                <div class="row mb-4 desktop-featured">
                     <div class="owl-carousel owl-theme mb-2">
                         <div class="item text-center me-4">
                             <h4 class="fw-bold">Branding</h4>
-                            <img src="assets/gallery/branding/branding1.jpg" class="img-fluid custom-img">
+                            <img src="assets/gallery/branding/branding1.jpg" class="img-fluid custom-img h-md-200">
                         </div>
                         <div class="item text-center me-4">
                             <h4 class="fw-bold">Illustration</h4>
-                            <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid custom-img">
+                            <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid custom-img h-md-200">
                         </div>
                         <div class="item text-center me-4">
                             <h4 class="fw-bold">Social Media</h4>
-                            <img src="assets/gallery/social/soc1.jpg" class="img-fluid custom-img">
+                            <img src="assets/gallery/social/soc1.jpg" class="img-fluid custom-img h-md-200">
                         </div>
                         <div class="item text-center me-4">
                             <h4 class="fw-bold">Merch</h4>
-                            <img src="assets/gallery/merch/merch2.jpg" class="img-fluid custom-img">
+                            <img src="assets/gallery/merch/merch2.jpg" class="img-fluid custom-img h-md-200">
                         </div>
                         <div class="item text-center me-4">
                             <h4 class="fw-bold">Posters</h4>
-                            <img src="assets/gallery/posters/post1.jpg" class="img-fluid custom-img">
+                            <img src="assets/gallery/posters/post1.jpg" class="img-fluid custom-img h-md-200">
                         </div>
                     </div>
                     <a href="works.html" class="link link-primary fw-bold text-decoration-none text-center fs-4">See More Work Samples <i class="bi bi-arrow-right ms-2 fw-bold"></i></a>
+                </div>
+                <div class="row mb-4 mobile-featured">
+                    <div class="col-6">
+                        <h4 class="fw-bold">Branding</h4>
+                        <img src="assets/gallery/branding/branding1.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="fw-bold">Illustration</h4>
+                        <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="fw-bold">Social Media</h4>
+                        <img src="assets/gallery/social/soc1.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="fw-bold">Merch</h4>
+                        <img src="assets/gallery/merch/merch2.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="fw-bold">Posters</h4>
+                        <img src="assets/gallery/posters/post1.jpg" class="img-fluid">
+                    </div>
                 </div>
             </div>
         </section>
         <!-- 2 column -->
         <section class="bg-dark">
             <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-lg-6 col-12">
+                <div class="row d-flex align-items-center py-lg-0 py-md-4">
+                    <div class="col-lg-6 col-md-6 col-12">
                         <h3 class="fs-1 fw-bolder text-primary mb-4">Want to work with us?</h3>
                         <p class="text-white mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
                         <a class="btn btn-primary btn-lg px-4" href="#">Contact Us</a>
                     </div>
-                    <div class="col-lg-6 col-12 justify-content-end d-flex">
-                        <img src="assets/example-scene-2.svg" class="img-fluid custom-img">
+                    <div class="col-lg-6 col-md-6 col-12 justify-content-end d-flex">
+                        <img src="assets/example-scene-2.svg" class="img-fluid custom-img obj-fit-sm-contain">
                     </div>
                 </div>
             </div>
@@ -364,7 +429,7 @@
                     <div class="accordion accordion-flush custom-accordion mx-auto" id="accordionFlushExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <button class="accordion-button collapsed bg-offwhite" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                               Accordion Item #1
                             </button>
                           </h2>
@@ -374,7 +439,7 @@
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <button class="accordion-button collapsed bg-offwhite" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                               Accordion Item #2
                             </button>
                           </h2>
@@ -384,7 +449,7 @@
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <button class="accordion-button collapsed bg-offwhite" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                               Accordion Item #3
                             </button>
                           </h2>
@@ -486,6 +551,28 @@
         });
     </script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>    
+    <script src="js/owl.carousel.min.js"></script>   
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:2,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:3,
+                    nav:true,
+                    loop:false
+                }
+            }
+        })
+    </script>
     </body>
 </html>
