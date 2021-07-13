@@ -96,12 +96,19 @@
                 fill: #ffffff !important;
             }
 
-            .mobile-featured {
+            .mobile-featured, .mobile-pricing {
                 display: none;
             }
 
             .owl-dots, .owl-nav {
                 height: 0;
+                display: none;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                .custom-img {
+                    height: 300px;
+                }
             }
 
             @media only screen and (max-width: 768px) {
@@ -123,16 +130,12 @@
                     height: 150px;
                     object-fit: contain;
                 }
-
-                .owl-nav {
-                    display: none;
-                }
                 
-                .desktop-featured {
+                .desktop-featured, .desktop-pricing {
                     display: none;
                 }
 
-                .mobile-featured {
+                .mobile-featured, .mobile-pricing {
                     display: flex;
                     justify-content: center;
                     text-align: center;
@@ -160,11 +163,12 @@
         <!-- Pricing section -->
         <section class="bg-dark py-4">
             <div class="container px-5 d-flex justify-content-center flex-column">
-                <div class="row gx-5 justify-content-center my-4">
+                <div class="row gx-5 justify-content-center my-4 desktop-pricing">
                     <div class="myslider owl-carousel owl-theme mb-2">
                         <div class="item text-center me-4 d-flex flex-row" data-dot="<button>Logos</button>">
                             <!-- Pricing card free-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                                <h4 class="fw-bold text-white">Logos Trial</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -211,7 +215,8 @@
                                 </div>
                             </div>
                             <!-- Pricing card pro-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 me-auto">
+                                <h4 class="fw-bold text-white">Logos Pro</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold">
@@ -253,54 +258,6 @@
                                             </li>
                                             <li class="text-muted">
                                                 <i class="bi bi-x"></i>
-                                                Monthly status reports
-                                            </li>
-                                        </ul>
-                                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pricing card enterprise-->
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-offwhite">
-                                    <div class="card-body p-5">
-                                        <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                        <div class="mb-3">
-                                            <span class="display-4 fw-bold">$49</span>
-                                            <span class="text-muted">/ mo.</span>
-                                        </div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited users</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                5GB storage
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited public projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Community access
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited private projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Dedicated support
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited</strong>
-                                                linked domains
-                                            </li>
-                                            <li class="text-muted">
-                                                <i class="bi bi-check text-primary"></i>
                                                 Monthly status reports
                                             </li>
                                         </ul>
@@ -311,7 +268,8 @@
                         </div>
                         <div class="item text-center me-4 d-flex flex-row" data-dot="<button>Branding</button>">
                             <!-- Pricing card free-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                                <h4 class="fw-bold text-white">Branding Trial</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -358,7 +316,8 @@
                                 </div>
                             </div>
                             <!-- Pricing card pro-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 me-auto">
+                                <h4 class="fw-bold text-white">Branding Pro</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold">
@@ -400,54 +359,6 @@
                                             </li>
                                             <li class="text-muted">
                                                 <i class="bi bi-x"></i>
-                                                Monthly status reports
-                                            </li>
-                                        </ul>
-                                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pricing card enterprise-->
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-offwhite">
-                                    <div class="card-body p-5">
-                                        <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                        <div class="mb-3">
-                                            <span class="display-4 fw-bold">$49</span>
-                                            <span class="text-muted">/ mo.</span>
-                                        </div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited users</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                5GB storage
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited public projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Community access
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited private projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Dedicated support
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited</strong>
-                                                linked domains
-                                            </li>
-                                            <li class="text-muted">
-                                                <i class="bi bi-check text-primary"></i>
                                                 Monthly status reports
                                             </li>
                                         </ul>
@@ -458,7 +369,8 @@
                         </div>
                         <div class="item text-center me-4 d-flex flex-row" data-dot="<button>Illustration</button>">
                             <!-- Pricing card free-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                                <h4 class="fw-bold text-white">Illustration Trial</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -505,7 +417,8 @@
                                 </div>
                             </div>
                             <!-- Pricing card pro-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 me-auto">
+                                <h4 class="fw-bold text-white">Illustration Pro</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold">
@@ -547,54 +460,6 @@
                                             </li>
                                             <li class="text-muted">
                                                 <i class="bi bi-x"></i>
-                                                Monthly status reports
-                                            </li>
-                                        </ul>
-                                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pricing card enterprise-->
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-offwhite">
-                                    <div class="card-body p-5">
-                                        <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                        <div class="mb-3">
-                                            <span class="display-4 fw-bold">$49</span>
-                                            <span class="text-muted">/ mo.</span>
-                                        </div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited users</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                5GB storage
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited public projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Community access
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited private projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Dedicated support
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited</strong>
-                                                linked domains
-                                            </li>
-                                            <li class="text-muted">
-                                                <i class="bi bi-check text-primary"></i>
                                                 Monthly status reports
                                             </li>
                                         </ul>
@@ -605,7 +470,8 @@
                         </div>
                         <div class="item text-center me-4 d-flex flex-row" data-dot="<button>Social Media</button>">
                             <!-- Pricing card free-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                                <h4 class="fw-bold text-white">Social Media Trial</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -652,7 +518,8 @@
                                 </div>
                             </div>
                             <!-- Pricing card pro-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 me-auto">
+                                <h4 class="fw-bold text-white">Social Media Pro</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold">
@@ -694,54 +561,6 @@
                                             </li>
                                             <li class="text-muted">
                                                 <i class="bi bi-x"></i>
-                                                Monthly status reports
-                                            </li>
-                                        </ul>
-                                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pricing card enterprise-->
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-offwhite">
-                                    <div class="card-body p-5">
-                                        <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                        <div class="mb-3">
-                                            <span class="display-4 fw-bold">$49</span>
-                                            <span class="text-muted">/ mo.</span>
-                                        </div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited users</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                5GB storage
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited public projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Community access
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited private projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Dedicated support
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited</strong>
-                                                linked domains
-                                            </li>
-                                            <li class="text-muted">
-                                                <i class="bi bi-check text-primary"></i>
                                                 Monthly status reports
                                             </li>
                                         </ul>
@@ -752,7 +571,8 @@
                         </div>
                         <div class="item text-center me-4 d-flex flex-row" data-dot="<button>Merch</button>">
                             <!-- Pricing card free-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                                <h4 class="fw-bold text-white">Merch Trial</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -799,7 +619,8 @@
                                 </div>
                             </div>
                             <!-- Pricing card pro-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 me-auto">
+                                <h4 class="fw-bold text-white">Merch Pro</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold">
@@ -841,54 +662,6 @@
                                             </li>
                                             <li class="text-muted">
                                                 <i class="bi bi-x"></i>
-                                                Monthly status reports
-                                            </li>
-                                        </ul>
-                                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Pricing card enterprise-->
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-offwhite">
-                                    <div class="card-body p-5">
-                                        <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                        <div class="mb-3">
-                                            <span class="display-4 fw-bold">$49</span>
-                                            <span class="text-muted">/ mo.</span>
-                                        </div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited users</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                5GB storage
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited public projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Community access
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited private projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Dedicated support
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited</strong>
-                                                linked domains
-                                            </li>
-                                            <li class="text-muted">
-                                                <i class="bi bi-check text-primary"></i>
                                                 Monthly status reports
                                             </li>
                                         </ul>
@@ -899,7 +672,8 @@
                         </div>
                         <div class="item text-center me-4 d-flex flex-row" data-dot="<button>Posters</button>">
                             <!-- Pricing card free-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                                <h4 class="fw-bold text-white">Posters Trial</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold text-muted">Free</div>
@@ -946,7 +720,8 @@
                                 </div>
                             </div>
                             <!-- Pricing card pro-->
-                            <div class="col-lg-4 col-md-6 col-12 me-4">
+                            <div class="col-lg-4 col-md-6 col-12 me-auto">
+                                <h4 class="fw-bold text-white">Posters Pro</h4>
                                 <div class="card mb-5 mb-xl-0 bg-offwhite">
                                     <div class="card-body p-5">
                                         <div class="small text-uppercase fw-bold">
@@ -995,52 +770,511 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Pricing card enterprise-->
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="card bg-offwhite">
-                                    <div class="card-body p-5">
-                                        <div class="small text-uppercase fw-bold text-muted">Enterprise</div>
-                                        <div class="mb-3">
-                                            <span class="display-4 fw-bold">$49</span>
-                                            <span class="text-muted">/ mo.</span>
-                                        </div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited users</strong>
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                5GB storage
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited public projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Community access
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Unlimited private projects
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Dedicated support
-                                            </li>
-                                            <li class="mb-2">
-                                                <i class="bi bi-check text-primary"></i>
-                                                <strong>Unlimited</strong>
-                                                linked domains
-                                            </li>
-                                            <li class="text-muted">
-                                                <i class="bi bi-check text-primary"></i>
-                                                Monthly status reports
-                                            </li>
-                                        </ul>
-                                        <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 mobile-pricing">
+                    <div class="col-12">
+                        <!-- Pricing card free-->
+                        <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                            <h4 class="fw-bold text-white">Logos Trial</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$0</span>
+                                        <span class="text-muted">/ mo.</span>
                                     </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>1 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pricing card pro-->
+                        <div class="col-lg-4 col-md-6 col-12 me-auto">
+                            <h4 class="fw-bold text-white">Logos Pro</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Pro
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$9</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>5 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- Pricing card free-->
+                        <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                            <h4 class="fw-bold text-white">Illustration Trial</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$0</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>1 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pricing card pro-->
+                        <div class="col-lg-4 col-md-6 col-12 me-auto">
+                            <h4 class="fw-bold text-white">Illustration Pro</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Pro
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$9</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>5 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- Pricing card free-->
+                        <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                            <h4 class="fw-bold text-white">Social Media Trial</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$0</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>1 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pricing card pro-->
+                        <div class="col-lg-4 col-md-6 col-12 me-auto">
+                            <h4 class="fw-bold text-white">Social Media Pro</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Pro
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$9</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>5 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- Pricing card free-->
+                        <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                            <h4 class="fw-bold text-white">Merch Trial</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$0</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>1 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pricing card pro-->
+                        <div class="col-lg-4 col-md-6 col-12 me-auto">
+                            <h4 class="fw-bold text-white">Merch Pro</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Pro
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$9</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>5 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- Pricing card free-->
+                        <div class="col-lg-4 col-md-6 col-12 ms-auto me-4">
+                            <h4 class="fw-bold text-white">Posters Trial</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold text-muted">Free</div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$0</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>1 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2 text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pricing card pro-->
+                        <div class="col-lg-4 col-md-6 col-12 me-auto">
+                            <h4 class="fw-bold text-white">Posters Pro</h4>
+                            <div class="card mb-5 mb-xl-0 bg-offwhite">
+                                <div class="card-body p-5">
+                                    <div class="small text-uppercase fw-bold">
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                        Pro
+                                    </div>
+                                    <div class="mb-3">
+                                        <span class="display-4 fw-bold">$9</span>
+                                        <span class="text-muted">/ mo.</span>
+                                    </div>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            <strong>5 users</strong>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            5GB storage
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited public projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Community access
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Unlimited private projects
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Dedicated support
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check text-primary"></i>
+                                            Free linked domain
+                                        </li>
+                                        <li class="text-muted">
+                                            <i class="bi bi-x"></i>
+                                            Monthly status reports
+                                        </li>
+                                    </ul>
+                                    <div class="d-grid"><a class="btn btn-primary" href="#!">Choose plan</a></div>
                                 </div>
                             </div>
                         </div>
@@ -1058,6 +1292,10 @@
                 </div>
                 <div class="row mb-4 desktop-featured">
                     <div class="owl-carousel owl-theme mb-2">
+                        <div class="item text-center me-4">
+                            <h4 class="fw-bold">Logos</h4>
+                            <img src="assets/gallery/logos/logo7.jpg" class="img-fluid custom-img h-md-200">
+                        </div>
                         <div class="item text-center me-4">
                             <h4 class="fw-bold">Branding</h4>
                             <img src="assets/gallery/branding/branding1.jpg" class="img-fluid custom-img h-md-200">
@@ -1082,25 +1320,29 @@
                     <a href="works.html" class="link link-primary fw-bold text-decoration-none text-center fs-4">See More Work Samples <i class="bi bi-arrow-right ms-2 fw-bold"></i></a>
                 </div>
                 <div class="row mb-4 mobile-featured">
-                    <div class="col-6">
+                    <div class="col-6 mb-2">
+                        <h4 class="fw-bold">Logos</h4>
+                        <img src="assets/gallery/logos/logo7.jpg" class="img-fluid custom-img">
+                    </div>
+                    <div class="col-6 mb-2">
                         <h4 class="fw-bold">Branding</h4>
-                        <img src="assets/gallery/branding/branding1.jpg" class="img-fluid">
+                        <img src="assets/gallery/branding/branding1.jpg" class="img-fluid custom-img">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 mb-2">
                         <h4 class="fw-bold">Illustration</h4>
-                        <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid">
+                        <img src="assets/gallery/illustration/illus2.jpg" class="img-fluid custom-img">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 mb-2">
                         <h4 class="fw-bold">Social Media</h4>
-                        <img src="assets/gallery/social/soc1.jpg" class="img-fluid">
+                        <img src="assets/gallery/social/soc1.jpg" class="img-fluid custom-img">
                     </div>
                     <div class="col-6">
                         <h4 class="fw-bold">Merch</h4>
-                        <img src="assets/gallery/merch/merch2.jpg" class="img-fluid">
+                        <img src="assets/gallery/merch/merch2.jpg" class="img-fluid custom-img">
                     </div>
                     <div class="col-6">
                         <h4 class="fw-bold">Posters</h4>
-                        <img src="assets/gallery/posters/post1.jpg" class="img-fluid">
+                        <img src="assets/gallery/posters/post1.jpg" class="img-fluid custom-img">
                     </div>
                 </div>
             </div>
@@ -1108,14 +1350,14 @@
         <!-- 2 column -->
         <section class="bg-dark">
             <div class="container">
-                <div class="row d-flex align-items-center py-lg-0 py-md-4">
+                <div class="row d-flex align-items-center py-lg-0 py-4">
                     <div class="col-lg-6 col-md-6 col-12">
                         <h3 class="fs-1 fw-bolder text-primary mb-4">Want to work with us?</h3>
                         <p class="text-white mb-4">Curabitur diam mi, consectetur sit amet eros quis, gravida fringilla lorem. Aliquam erat volutpat. Integer turpis metus, pellentesque et nisl consequat, pulvinar molestie ante.</p>
                         <a class="btn btn-primary btn-lg px-4" href="#">Contact Us</a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 justify-content-end d-flex">
-                        <img src="assets/example-scene-2.svg" class="img-fluid custom-img obj-fit-sm-contain">
+                        <img src="assets/example-scene-2.svg" class="img-fluid obj-fit-sm-contain">
                     </div>
                 </div>
             </div>
@@ -1291,7 +1533,7 @@
         $('.myslider').owlCarousel({
                 items:1,
                 nav: false,
-                dots: true,
+                dots: false,
                 dotsData: true,
             });
         });
@@ -1308,19 +1550,14 @@
                     items:1,
                     nav:true
                 },
-                480:{
+                600:{
                     items:1,
-                    nav:false
-                },
-                768:{
-                    items:1,
-                    nav:true,
-                    loop:false
+                    nav:true
                 },
                 1000:{
                     items:1,
                     nav:true,
-                    loop:false
+                    loop:true
                 }
             }
         })
@@ -1343,7 +1580,7 @@
                 1000:{
                     items:3,
                     nav:true,
-                    loop:false
+                    loop:true
                 }
             }
         })
