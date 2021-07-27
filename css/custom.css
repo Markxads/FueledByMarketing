@@ -59,6 +59,12 @@ h1.display-5.fw-bolder.text-white.mb-2::after, h2.fw-bolder.text-light::after {
     box-shadow: 0 0 0 0.25rem rgb(245 162 25 / 50%);
 }
 
+.service-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
 /* Gallery Styles */
 
 .portfolio-menu{
@@ -98,6 +104,11 @@ h1.display-5.fw-bolder.text-white.mb-2::after, h2.fw-bolder.text-light::after {
 
 .link-dark {
     text-decoration: none !important;
+}
+
+.service-link > div:hover {
+    box-shadow: 0 0 20px #f5a219;
+    transition: all 0.2s ease-in;
 }
 
 .form-control:focus {
